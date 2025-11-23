@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kobe+Mono:wght@300&display=swap');
+@import "tailwindcss";
+
+body {
+  background-color: black;
+  font-family: "Kobe Mono", monospace;
+}
+
+.kobe-mono-300 {
+  font-family: "Kobe Mono", monospace;
+  font-weight: 300;
+}
+
+.shadow-glow {
+  box-shadow: 0px 0px 15px 5px rgba(5, 120, 120, 0.7);
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 5px rgba(207, 206, 206, 0.5);
+}
+
+/* Custom Scrollbar for Dark Mode */
+
+/* 1. Track (The entire scrollbar background area) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height for horizontal scrollbars (if any) */
+}
+
+/* 2. Track Background (Matches the neutral-950 body/main background) */
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+/* 3. Thumb (The movable handle) */
+::-webkit-scrollbar-thumb {
+  background-color: #374151; /* Darker neutral gray */
+  border-radius: 10px; /* Fully rounded corners */
+  /* Adds a slight dark border to make the thumb look inset */
+  border: 2px solid #111827; 
+}
+
+/* 4. Thumb on Hover (Adds interaction) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3b82f6; /* Tailwind Blue-500 on hover */
+}
+
+/* Optional: For Firefox (Requires special CSS standard) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #111827;
+}
