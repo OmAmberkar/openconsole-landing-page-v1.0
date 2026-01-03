@@ -44,7 +44,7 @@ const itemVariants: Variants = {
 export default function FinalCTA() {
   const { playClick } = useSound();
   return (
-    <section className='py-20 md:py-24 w-full bg-neutral-950/70 relative z-10 overflow-hidden'>
+    <section className='py-20 md:py-24 w-full bg-blue-950/30 border-2 border-x-blue-600 border-y-0 shadow-[0_0_30px_rgba(59,130,246,0.3)] md:rounded-full rounded-4xl'>
       {/* Turn the container into a motion component.
               It will trigger the 'visible' animation state when it enters the viewport.
             */}
