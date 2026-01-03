@@ -1,6 +1,6 @@
-import React from 'react';
-import type { Variants } from 'framer-motion';
-import { motion } from 'framer-motion';
+import React from "react";
+import type { Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   CloudCog,
   ShieldCheck,
@@ -9,7 +9,7 @@ import {
   ChartAreaIcon,
   BlocksIcon,
   type LucideIcon,
-} from 'lucide-react';
+} from "lucide-react";
 
 // ==============================
 // 1. CONFIGURATION & DATA
@@ -24,47 +24,47 @@ interface FeatureItem {
 
 const featuresData: FeatureItem[] = [
   {
-    title: 'Unified Multi-Cloud Control',
+    title: "Unified Multi-Cloud Control",
     description:
-      'Stop tab switching. Manage AWS, GCP, Azure, and private servers from a single, real-time glass pane.',
+      "Stop tab switching. Manage AWS, GCP, Azure, and private servers from a single, real-time glass pane.",
     icon: CloudCog,
-    color: 'blue',
+    color: "blue",
   },
   {
-    title: 'Automated Workflows',
+    title: "Automated Workflows",
     description:
-      'Integrate with tools like Flowise to automate deployments, scaling, and routine infrastructure tasks.',
+      "Integrate with tools like Flowise to automate deployments, scaling, and routine infrastructure tasks.",
     icon: Workflow,
-    color: 'indigo',
+    color: "indigo",
   },
   {
-    title: 'Enforced Security & MFA',
+    title: "Enforced Security & MFA",
     description:
-      'Standardize security protocols across all providers with mandatory multi-factor authentication and policy enforcement.',
+      "Standardize security protocols across all providers with mandatory multi-factor authentication and policy enforcement.",
     icon: ShieldCheck,
-    color: 'purple',
+    color: "purple",
   },
   {
-    title: 'AI-Powered Cost Intel',
+    title: "AI-Powered Cost Intel",
     description:
-      'AI analyzes your cross-cloud spend to identify idle resources and recommend actionable savings.',
+      "AI analyzes your cross-cloud spend to identify idle resources and recommend actionable savings.",
     icon: BrainCircuit,
-    color: 'pink',
+    color: "pink",
   },
   {
-    title: 'Real-Time Monitoring',
+    title: "Real-Time Monitoring",
     description:
-      'Get unified dashboards with real-time metrics, alerts, and logs from all your cloud and on-premise resources.',
+      "Get unified dashboards with real-time metrics, alerts, and logs from all your cloud and on-premise resources.",
     icon: ChartAreaIcon,
-    color: 'indigo',
+    color: "indigo",
   },
   {
-    title: 'Customizable Dashboards',
+    title: "Customizable Dashboards",
     description:
-      'Tailor your control panel with widgets and views that matter most to your operations.',
+      "Tailor your control panel with widgets and views that matter most to your operations.",
     icon: BlocksIcon,
-    color: 'purple',
-  },
+    color: "purple",
+  }
 ];
 
 // ==============================
@@ -88,12 +88,13 @@ const cardVariants: Variants = {
     y: 0,
     scale: 1,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 100,
       damping: 15,
     },
   },
 };
+
 
 // 3. INDIVIDUAL FEATURE CARD
 // ==============================
@@ -105,21 +106,21 @@ const FeatureCard: React.FC<{ item: FeatureItem }> = ({ item }) => {
     <motion.div
       variants={cardVariants}
       whileHover={{ y: -5, scale: 1.02 }}
-      className='group h-90 relative p-8 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-2xl  hover:border-purple-700 hover:bg-purple-700/20 bg-blue-950/30 border-2  border-l-blue-700 border-t-blue-700 border-r-0 border-b-0 shadow-[0_0_10px_rgba(59,130,246,0.3)] rounded-4xl'
+      className="group h-90 relative p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-500/50 "
     >
       {/* Internal Glow Gradient on Hover - Changed to Cyan */}
-      <div className='absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-[radial-linear(ellipse_at_center,var(--tw-gradient-stops))] from-cyan-600/30 to-transparent -z-10'></div>
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-[radial-linear(ellipse_at_center,var(--tw-gradient-stops))] from-cyan-600/30 to-transparent -z-10"></div>
 
       {/* Icon Wrapper - Changed color to Cyan */}
-      <div className='mb-6 inline-block p-4 rounded-xl bg-cyan-950/50 text-blue-400 transition-colors duration-300 group-hover:bg-blue-500 group-hover:text-white shadow-lg shadow-cyan-900/20'>
-        <Icon className='w-8 h-8' />
+      <div className="mb-6 inline-block p-4 rounded-xl bg-cyan-950/50 text-cyan-400 transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white shadow-lg shadow-cyan-900/20">
+        <Icon className="w-8 h-8" />
       </div>
 
       {/* Content */}
-      <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-100 transition-colors'>
+      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-100 transition-colors">
         {item.title}
       </h3>
-      <p className='text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors'>
+      <p className="text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors">
         {item.description}
       </p>
     </motion.div>
@@ -132,19 +133,19 @@ const FeatureCard: React.FC<{ item: FeatureItem }> = ({ item }) => {
 
 const FeaturesSection = () => {
   return (
-    <section className='py-24 md:py-32 relative z-10 overflow-hidden '>
+    <section className="py-24 md:py-32 relative z-10 overflow-hidden">
       {/* ... (keep background glow) */}
 
-      <div className='container mx-auto px-4 '>
+      <div className="container mx-auto px-4">
         {/* ... (keep section header) */}
 
         {/* Features Grid - Removed align-middle as it's not needed here */}
         <motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, margin: '-100px' }} // Triggers when 100px from the viewport top
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Triggers when 100px from the viewport top
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {featuresData.map((item, index) => (
             // Each card uses the 'Crazy' spring animation and contributes to the stagger
