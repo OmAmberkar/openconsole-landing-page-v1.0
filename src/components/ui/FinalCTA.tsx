@@ -1,8 +1,8 @@
 // src/components/FinalCTA.tsx
 import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';  
+import type { Variants } from 'framer-motion';
 import { ArrowRight, Github, LayoutDashboard } from 'lucide-react';
-
+import { useSound } from '../../hooks/useSound';
 // ==============================
 // 1. ANIMATION VARIANTS
 // ==============================
@@ -42,6 +42,7 @@ const itemVariants: Variants = {
 // ==============================
 
 export default function FinalCTA() {
+    const {playClick} = useSound();
     return (
         <section className="py-20 md:py-24 w-full bg-neutral-950/70 relative z-10 overflow-hidden">
             {/* Turn the container into a motion component.
@@ -78,7 +79,8 @@ export default function FinalCTA() {
                 >
                     {/* Primary Button (Demo) */}
                     <a href='https://openconsole-dashboard-deploy.pages.dev/sign-in' target="_blank" rel="noreferrer">
-                        <button className="group w-full md:w-auto px-10 py-3.5 rounded-full bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                        <button className="group w-full md:w-auto px-10 py-3.5 rounded-full bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                        onClick={ playClick}>
                             <LayoutDashboard size={20} />
                             Go to Live Demo
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -90,6 +92,7 @@ export default function FinalCTA() {
                         href="https://github.com/openconsole-cloud/openconsole-workspace"
                         target="_blank"
                         rel="noreferrer"
+                        onClick={playClick }
                         className="group w-full md:w-auto px-10 py-3.5 rounded-full border border-neutral-700 bg-neutral-800/70 text-neutral-300 font-medium hover:bg-neutral-700 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer no-underline"
                     >
                         <Github size={20} className="group-hover:rotate-6 transition-transform" />

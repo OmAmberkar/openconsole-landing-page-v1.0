@@ -87,7 +87,7 @@ const Footer = () => {
 
   return (
     // RESPONSIVE: Reduced top padding on mobile (pt-16) -> (md:pt-24)
-    <footer className="bg-neutral-950 pt-16 md:pt-24 relative z-10 overflow-hidden">
+    <footer className="pt-16 md:pt-24 relative z-10 overflow-hidden bg-blue-950/30 border-2 border-b-blue-600 border-t-0 border-x-0 shadow-[0_0_30px_rgba(59,130,246,0.3)] rounded-4xl">
       {/* Black Hole Radial Gradient */}
       <div className="absolute inset-0 z-0 opacity-20 mask-[radial-gradient(100%_100%_at_center_bottom,black,transparent)]">
         <div className="w-full h-full bg-black/50 bg-[radial-gradient(50%_50%_at_center_bottom,rgba(59,130,246,0.3)_0%,transparent_70%)]"></div>

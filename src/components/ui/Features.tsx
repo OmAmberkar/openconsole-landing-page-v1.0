@@ -106,13 +106,12 @@ const FeatureCard: React.FC<{ item: FeatureItem }> = ({ item }) => {
     <motion.div
       variants={cardVariants}
       whileHover={{ y: -5, scale: 1.02 }}
-      className="group h-90 relative p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-500/50 "
-    >
+      className='group h-90 relative p-8 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-2xl  hover:border-purple-700 hover:bg-purple-700/20 bg-blue-950/30 border-2  border-l-blue-700 border-t-blue-700 border-r-0 border-b-0 shadow-[0_0_10px_rgba(59,130,246,0.3)] rounded-4xl'>
       {/* Internal Glow Gradient on Hover - Changed to Cyan */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-[radial-linear(ellipse_at_center,var(--tw-gradient-stops))] from-cyan-600/30 to-transparent -z-10"></div>
 
       {/* Icon Wrapper - Changed color to Cyan */}
-      <div className="mb-6 inline-block p-4 rounded-xl bg-cyan-950/50 text-cyan-400 transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white shadow-lg shadow-cyan-900/20">
+      <div className="mb-6 inline-block p-4 rounded-xl bg-cyan-950/50 text-blue-400 transition-colors duration-300 group-hover:bg-blue-500 group-hover:text-white shadow-lg shadow-cyan-900/20">
         <Icon className="w-8 h-8" />
       </div>
 

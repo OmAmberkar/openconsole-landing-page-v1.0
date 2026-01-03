@@ -52,9 +52,9 @@ function Spotlight() {
       // --- Styling Props ---
       // 1. Layout & Responsiveness: flex-col for mobile, lg:flex-row for desktop
       className="flex flex-col lg:flex-row items-center justify-between gap-8
-                 border border-neutral-700/50 bg-neutral-900/90 backdrop-blur-xl
-                 p-6 m-4 md:p-12 md:m-10 rounded-3xl
-                 shadow-2xl shadow-black/50 overflow-hidden relative"
+                 bg-blue-950/20 backdrop-blur-xl
+                 p-6 m-4 md:p-12 md:m-10
+                overflow-hidden relative border-2 border-t-blue-700 border-x-0 border-b-0 shadow-[0_0_30px_rgba(59,130,246,0.3)] rounded-4xl"
     >
       {/* Optional subtle background glow effect */}
       <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-neutral-800/20 to-transparent pointer-events-none -z-10"></div>
@@ -63,7 +63,6 @@ function Spotlight() {
       <motion.div className="flex-1 max-w-2xl" variants={textVariants}>
         <p
           className="font-normal text-lg md:text-xl text-neutral-300 leading-relaxed
-                     // Responsive text alignment and padding
                      text-center lg:text-left lg:pr-10"
         >
           Stop juggling tabs across distinct cloud providers. OpenConsole
