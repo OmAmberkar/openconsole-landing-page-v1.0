@@ -10,50 +10,53 @@
 
 ## Key Features
 
-* **Unified Cloud Context**: Seamlessly switch between AWS, GCP, and Azure environments using the global provider switcher.
-* **Visual Automation Builder**: Drag-and-drop workflow editor (`WorkflowCanvas`) to create, schedule, and execute DevOps tasks.
-* **Advanced Monitoring**: Real-time metrics visualization with interactive charts for compute, storage, and network resources.
-* **Cost Intelligence**: Detailed breakdown of cloud spending with budget alerts and optimization recommendations.
-* **Security Hub**: Centralized security compliance tracking, audit logs, and role-based access control (RBAC).
-* **Premium UI/UX**:
-    * **Shadcn UI**: Accessible, enterprise-grade component primitives.
-    * **Magic UI**: High-end visual effects (Border Beams, Text Reveals).
-    * **Framer Motion**: Smooth page transitions and micro-interactions.
-* **Fully Responsive**: Optimized layouts for desktop, tablet, and mobile devices.
+- **Unified Cloud Context**: Seamlessly switch between AWS, GCP, and Azure environments using the global provider switcher.
+- **Visual Automation Builder**: Drag-and-drop workflow editor (`WorkflowCanvas`) to create, schedule, and execute DevOps tasks.
+- **Advanced Monitoring**: Real-time metrics visualization with interactive charts for compute, storage, and network resources.
+- **Cost Intelligence**: Detailed breakdown of cloud spending with budget alerts and optimization recommendations.
+- **Security Hub**: Centralized security compliance tracking, audit logs, and role-based access control (RBAC).
+- **Premium UI/UX**:
+  - **Shadcn UI**: Accessible, enterprise-grade component primitives.
+  - **Magic UI**: High-end visual effects (Border Beams, Text Reveals).
+  - **Framer Motion**: Smooth page transitions and micro-interactions.
+- **Fully Responsive**: Optimized layouts for desktop, tablet, and mobile devices.
 
 ## Tech Stack
 
--   **Core**: [React 18](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **UI Libraries**:
-    -   [Shadcn UI](https://ui.shadcn.com/) (Base components)
-    -   [Magic UI](https://magicui.design/) (Visual effects)
-    -   [Framer Motion](https://www.framer.com/motion/) (Animations)
--   **State Management**: Zustand / Context API (Provider Stores)
--   **Icons**: [Lucide React](https://lucide.dev/)
--   **Charts**: Recharts
+- **Core**: [React 18](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Libraries**:
+  - [Shadcn UI](https://ui.shadcn.com/) (Base components)
+  - [Magic UI](https://magicui.design/) (Visual effects)
+  - [Framer Motion](https://www.framer.com/motion/) (Animations)
+- **State Management**: Zustand / Context API (Provider Stores)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: Recharts
 
 ## Getting Started
 
 ### Prerequisites
--   Node.js v18+
--   npm or yarn
+
+- Node.js v18+
+- npm or yarn
 
 ### Installation
 
 1.  **Clone the repository**
+
     ```bash
     git clone https://github.com/OmAmberkar/openconsole-landing-page-v1.0.git
     cd openconsole-landing-page-v1.0
     ```
 
 2.  **Install dependencies**
+
     ```bash
     npm install
     ```
 
-
 3.  **Start the development server**
+
     ```bash
     npm run dev
     ```
@@ -61,7 +64,7 @@
 4.  **Access the App**
     Open [http://localhost:5173](http://localhost:5173) to view the dashboard.
 
-##  Project Structure
+## Project Structure
 
 ```bash
 src/
@@ -73,22 +76,29 @@ src/
 ├── lib/
 └── test/
 ```
+
 # Available Scripts
-| Scripts | Description |
-| --- | --- |
-| ```bash npm run dev ``` | Starts the development server with HMR. |
-| ```bash npm run build ``` | Builds the application for production. |
-| ```bash npm run lint ``` | Runs ESLint to check code quality. |
-| ```bash npm run lint:fix ``` | Automatically fixes linting errors. |
-| ```bash npm run format ``` | Formats code using Prettier. |
-| ```bash npm run preview ``` | Previews the production build locally. |
+
+| Scripts                  | Description                             |
+| ------------------------ | --------------------------------------- |
+| `bash npm run dev `      | Starts the development server with HMR. |
+| `bash npm run build `    | Builds the application for production.  |
+| `bash npm run lint `     | Runs ESLint to check code quality.      |
+| `bash npm run lint:fix ` | Automatically fixes linting errors.     |
+| `bash npm run format `   | Formats code using Prettier.            |
+| `bash npm run preview `  | Previews the production build locally.  |
+
 # Theming & Customization
+
 The dashboard supports detailed theming via Tailwind CSS variables.
-* **Global Styles :** ```src/index.css```
-* **Animation Config :** ```tailwind.config.js```
+
+- **Global Styles :** `src/index.css`
+- **Animation Config :** `tailwind.config.js`
 
 ## Contributing
+
 We welcome contributions!
 
 ## License
+
 Distributed under the MIT License.
