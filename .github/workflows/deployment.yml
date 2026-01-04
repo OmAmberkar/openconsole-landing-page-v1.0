@@ -1,0 +1,21 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ "main" ] #only when there is merge with main branch
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name : "Building the Docker image"
+      run : docker build . -t omamberkar11/openconsole-landing-page
+
+    - name : "Getting in Docker Hub"
+      run : echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+    - name : "Pushing the Docker Image to Docker Hub"
+      run : docker push omamberkar11/openconsole-landing-page:latest
