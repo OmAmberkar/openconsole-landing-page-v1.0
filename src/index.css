@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kobe+Mono:wght@300&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
   background-color: black;
-  font-family: "Kobe Mono", monospace;
+  font-family: 'Kobe Mono', monospace;
 }
 
 .kobe-mono-300 {
-  font-family: "Kobe Mono", monospace;
+  font-family: 'Kobe Mono', monospace;
   font-weight: 300;
 }
 
@@ -37,7 +37,7 @@ body {
   background-color: #374151; /* Darker neutral gray */
   border-radius: 10px; /* Fully rounded corners */
   /* Adds a slight dark border to make the thumb look inset */
-  border: 2px solid #111827; 
+  border: 2px solid #111827;
 }
 
 /* 4. Thumb on Hover (Adds interaction) */
